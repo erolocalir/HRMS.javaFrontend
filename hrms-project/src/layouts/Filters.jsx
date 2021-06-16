@@ -1,37 +1,33 @@
 import React from 'react'
-import { Input, Label, Menu } from 'semantic-ui-react'
+import { Menu, Icon } from 'semantic-ui-react'
+import { Link } from "react-router-dom";
 
 export default function Filters() {
     return (
         <div>
             <Menu vertical>
-                <Menu.Item
-                    name='İŞ İLANLARI'
+                <Menu.Item name='İŞ İLANLARI' as={Link} to={"/"} >
 
-                >
-                    <Label color='teal'>156</Label>
+                    <Icon name="list" />
          İŞ İLANLARI
         </Menu.Item>
 
-                <Menu.Item
-                    name='ŞİRKET BİLGİLERİ'
+                <Menu.Item name='ŞİRKET BİLGİLERİ' as={Link} to={"/10"} >
 
-                >
-                    <Label></Label>
+                    <Icon name="factory" />
+
          ŞİRKET BİLGİLERİ
         </Menu.Item>
 
-                <Menu.Item
-                    name='CV BİLGİLERİ'
+                <Menu.Item name='CV BİLGİLERİ' as={Link} to={"/CV"}>
 
-                >
-                    <Label>632</Label>
+                    <Icon name="wordpress forms" />
          CV BİLGİLERİ
         </Menu.Item>
-                <Menu.Item>
-                    <Input icon='search' placeholder='Bir şey arayın...' />
-                </Menu.Item>
+              
             </Menu>
+
+            
         </div>
     )
 }
